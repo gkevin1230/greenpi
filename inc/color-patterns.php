@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Seventeen: Color Patterns
+ * GreenPi: Color Patterns
  *
  * @package WordPress
  * @subpackage greenpi
@@ -14,9 +14,9 @@ function greenpi_custom_colors_css() {
 	$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
 
 	/**
-	 * Filter Twenty Seventeen default saturation level.
+	 * Filter GreenPi default saturation level.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since GreenPi 1.0
 	 *
 	 * @param int $saturation Color saturation level.
 	 */
@@ -25,7 +25,7 @@ function greenpi_custom_colors_css() {
 	$saturation = $saturation . '%';
 	$css = '
 /**
- * Twenty Seventeen: Color Patterns
+ * GreenPi: Color Patterns
  *
  * Colors are ordered from dark to light.
  */
@@ -568,9 +568,9 @@ body.colors-custom,
 }';
 
 	/**
-	 * Filters Twenty Seventeen custom colors CSS.
+	 * Filters GreenPi custom colors CSS.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since GreenPi 1.0
 	 *
 	 * @param string $css        Base theme colors CSS.
 	 * @param int    $hue        The user's selected color hue.

@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Seventeen: Customizer
+ * GreenPi: Customizer
  *
  * @package WordPress
  * @subpackage greenpi
@@ -86,9 +86,9 @@ function greenpi_customize_register( $wp_customize ) {
 	) );
 
 	/**
-	 * Filter number of front page sections in Twenty Seventeen.
+	 * Filter number of front page sections in GreenPi.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since GreenPi 1.0
 	 *
 	 * @param int $num_sections Number of front page sections.
 	 */
@@ -157,7 +157,7 @@ function greenpi_sanitize_colorscheme( $input ) {
 /**
  * Render the site title for the selective refresh partial.
  *
- * @since Twenty Seventeen 1.0
+ * @since GreenPi 1.0
  * @see greenpi_customize_register()
  *
  * @return void
@@ -169,7 +169,7 @@ function greenpi_customize_partial_blogname() {
 /**
  * Render the site tagline for the selective refresh partial.
  *
- * @since Twenty Seventeen 1.0
+ * @since GreenPi 1.0
  * @see greenpi_customize_register()
  *
  * @return void

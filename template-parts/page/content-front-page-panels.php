@@ -1,12 +1,4 @@
 <?php
-/**
- * Template part for displaying pages on front page
- *
- * @package WordPress
- * @subpackage greenpi
- * @since 1.0
- * @version 1.0
- */
 
 global $greenpicounter;
 

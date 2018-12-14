@@ -1,16 +1,4 @@
 <?php
-/**
- * The front page template file
- *
- * If the user has selected a static page for their homepage, this is what will
- * appear.
- * Learn more: https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage greenpi
- * @since 1.0
- * @version 1.0
- */
 
 get_header(); ?>
 
@@ -31,9 +19,9 @@ get_header(); ?>
 		if ( 0 !== greenpi_panel_count() || is_customize_preview() ) : // If we have pages to show.
 
 			/**
-			 * Filter number of front page sections in Twenty Seventeen.
+			 * Filter number of front page sections in GreenPi.
 			 *
-			 * @since Twenty Seventeen 1.0
+			 * @since GreenPi 1.0
 			 *
 			 * @param int $num_sections Number of front page sections.
 			 */

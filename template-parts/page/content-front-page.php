@@ -1,14 +1,3 @@
-<?php
-/**
- * Displays content for front page
- *
- * @package WordPress
- * @subpackage greenpi
- * @since 1.0
- * @version 1.0
- */
-
-?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'greenpi-panel ' ); ?> >
 
 	<?php if ( has_post_thumbnail() ) :

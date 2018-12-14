@@ -17,9 +17,9 @@
 function greenpi_custom_header_setup() {
 
 	/**
-	 * Filter Twenty Seventeen custom-header support arguments.
+	 * Filter GreenPi custom-header support arguments.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since GreenPi 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
