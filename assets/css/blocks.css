@@ -125,7 +125,7 @@ p.has-drop-cap:not(:focus)::first-letter {
 	padding: 0.7em 2em;
 	-webkit-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
-	white-space: nowrap;
+	white-space: nocontainer;
 }
 
 .wp-block-file .wp-block-file__button:hover,
@@ -202,7 +202,7 @@ p.has-drop-cap:not(:focus)::first-letter {
 	padding: 0.7em 2em;
 	-webkit-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
-	white-space: nowrap;
+	white-space: nocontainer;
 }
 
 .wp-block-button .wp-block-button__link:hover,

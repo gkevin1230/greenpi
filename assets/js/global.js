@@ -6,7 +6,7 @@
 		$customHeader = $body.find( '.custom-header' ),
 		$branding = $customHeader.find( '.site-branding' ),
 		$navigation = $body.find( '.navigation-top' ),
-		$navWrap = $navigation.find( '.wrap' ),
+		$navcontainer = $navigation.find( '.container' ),
 		$navMenuItem = $navigation.find( '.menu-item' ),
 		$menuToggle = $navigation.find( '.menu-toggle' ),
 		$menuScrollDown = $body.find( '.menu-scroll-down' ),
@@ -48,7 +48,7 @@
 	function setNavProps() {
 		navigationHeight      = $navigation.height();
 		navigationOuterHeight = $navigation.outerHeight();
-		navPadding            = parseFloat( $navWrap.css( 'padding-top' ) ) * 2;
+		navPadding            = parseFloat( $navcontainer.css( 'padding-top' ) ) * 2;
 		navMenuItemHeight     = $navMenuItem.outerHeight() * 2;
 		idealNavHeight        = navPadding + navMenuItemHeight;
 		navIsNotTooTall       = navigationHeight <= idealNavHeight;

@@ -1,7 +1,7 @@
 		</div><!-- #content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="wrap">
+			<div class="container">
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );
 
@@ -21,9 +21,8 @@
 
 				get_template_part( 'template-parts/footer/site', 'info' );
 				?>
-			</div><!-- .wrap -->
+			</div><!-- .container -->
 		</footer><!-- #colophon -->
-	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
 

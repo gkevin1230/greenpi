@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -28,8 +28,8 @@ get_header(); ?>
 				endif;
 
 				the_post_navigation( array(
-					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'greenpi' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'greenpi' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . greenpi_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'greenpi' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'greenpi' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . greenpi_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'greenpi' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'greenpi' ) . '</span> <span class="nav-title"><span class="nav-title-icon-containerper">' . greenpi_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
+					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'greenpi' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'greenpi' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-containerper">' . greenpi_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
 				) );
 
 			endwhile; // End of the loop.
@@ -38,6 +38,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+</div><!-- .container -->
 
 <?php get_footer();

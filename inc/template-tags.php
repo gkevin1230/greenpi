@@ -15,7 +15,7 @@ if ( ! function_exists( 'greenpi_posted_on' ) ) :
  */
 function greenpi_posted_on() {
 
-	// Get the author name; wrap it in a link.
+	// Get the author name; container it in a link.
 	$byline = sprintf(
 		/* translators: %s: post author */
 		__( 'by %s', 'greenpi' ),
@@ -45,7 +45,7 @@ function greenpi_time_link() {
 		get_the_modified_date()
 	);
 
-	// Wrap the time string in a link, and preface it with 'Posted on'.
+	// container the time string in a link, and preface it with 'Posted on'.
 	return sprintf(
 		/* translators: %s: post date */
 		__( '<span class="screen-reader-text">Posted on</span> %s', 'greenpi' ),

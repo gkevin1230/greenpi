@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<div class="wrap">
+<div class="container">
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<header class="page-header">
 			<h1 class="page-title"><?php single_post_title(); ?></h1>
@@ -46,6 +46,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+</div><!-- .container -->
 
 <?php get_footer();

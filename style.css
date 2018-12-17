@@ -255,7 +255,7 @@ template {
 	overflow: hidden;
 	position: absolute !important;
 	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	word-container: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -1256,48 +1256,6 @@ a:hover .nav-title,
 	opacity: 0.7;
 }
 
-/*--------------------------------------------------------------
-12.0 Navigation
---------------------------------------------------------------*/
-
-.navigation-top {
-	background: #fff;
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
-	font-size: 16px;
-	font-size: 1rem;
-	position: relative;
-}
-
-.navigation-top .wrap {
-	max-width: 1000px;
-	padding: 0;
-}
-
-.navigation-top a {
-	color: #222;
-	font-weight: 600;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-}
-
-.navigation-top .current-menu-item > a,
-.navigation-top .current_page_item > a {
-	color: #767676;
-}
-
-.main-navigation {
-	clear: both;
-	display: block;
-}
-
-.main-navigation ul {
-	background: #fff;
-	list-style: none;
-	margin: 0;
-	padding: 0 1.5em;
-	text-align: left;
-}
 
 /* Hide the menu on small screens when JavaScript is available.
  * It only works with JavaScript.
@@ -1473,30 +1431,12 @@ body {
 
 #page {
 	position: relative;
-	word-wrap: break-word;
-}
-
-.wrap {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 700px;
-	padding-left: 2em;
-	padding-right: 2em;
-}
-
-.wrap:after {
-	clear: both;
-	content: "";
-	display: block;
+	word-container: break-word;
 }
 
 /*--------------------------------------------------------------
 13.1 Header
 --------------------------------------------------------------*/
-
-#masthead .wrap {
-	position: relative;
-}
 
 .site-header {
 	background-color: #fafafa;
@@ -1605,51 +1545,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	width: 100%;
 }
 
-.custom-header-media {
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 100%;
-}
-
-.custom-header-media:before {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
-	background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	right: 0;
-	z-index: 2;
-}
-
-.has-header-image .custom-header-media img,
-.has-header-video .custom-header-media video,
-.has-header-video .custom-header-media iframe {
-	position: fixed;
-	height: auto;
-	left: 50%;
-	max-width: 1000%;
-	min-height: 100%;
-	min-width: 100%;
-	min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
-	width: auto;
-	top: 50%;
-	padding-bottom: 1px; /* Prevent header from extending beyond the footer */
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-}
-
 .wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
 	background-color: rgba(34, 34, 34, 0.5);
 	border: 1px solid rgba(255, 255, 255, 0.6);
@@ -1674,41 +1569,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 
 .admin-bar .wp-custom-header-video-button {
 	top: 62px;
-}
-
-.has-header-image:not(.greenpi-front-page):not(.home) .custom-header-media img {
-	bottom: 0;
-	position: absolute;
-	top: auto;
-	-ms-transform: translateX(-50%) translateY(0);
-	-moz-transform: translateX(-50%) translateY(0);
-	-webkit-transform: translateX(-50%) translateY(0);
-	transform: translateX(-50%) translateY(0);
-}
-
-/* For browsers that support 'object-fit' */
-@supports ( object-fit: cover ) {
-	.has-header-image .custom-header-media img,
-	.has-header-video .custom-header-media video,
-	.has-header-video .custom-header-media iframe,
-	.has-header-image:not(.greenpi-front-page):not(.home) .custom-header-media img {
-		height: 100%;
-		left: 0;
-		-o-object-fit: cover;
-		object-fit: cover;
-		top: 0;
-		-ms-transform: none;
-		-moz-transform: none;
-		-webkit-transform: none;
-		transform: none;
-		width: 100%;
-	}
-}
-
-/* Hides div in Customizer preview when header images or videos change. */
-
-body:not(.has-header-image):not(.has-header-video) .custom-header-media {
-	display: none;
 }
 
 .has-header-image.greenpi-front-page .site-branding,
@@ -1764,11 +1624,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 	position: relative;
 }
 
-.panel-content .wrap {
-	padding-bottom: 0.5em;
-	padding-top: 1.75em;
-}
-
 /* Panel edit link */
 
 .greenpi-panel .edit-link {
@@ -1812,11 +1667,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 /*--------------------------------------------------------------
 13.3 Regular Content
 --------------------------------------------------------------*/
-
-.site-content-contain {
-	background-color: #fff;
-	position: relative;
-}
 
 .site-content {
 	padding: 2.5em 0 0;
@@ -2005,12 +1855,12 @@ body:not(.greenpi-front-page) .entry-header {
 	color: #222;
 	display: inline-block;
 	margin-left: 1em;
-	white-space: nowrap;
+	white-space: nocontainer;
 }
 
 .search .page .entry-meta a.post-edit-link {
 	margin-left: 0;
-	white-space: nowrap;
+	white-space: nocontainer;
 }
 
 .taxonomy-description {
@@ -2127,7 +1977,7 @@ body:not(.greenpi-front-page) .entry-header {
 	padding: 0.7em 2em;
 	-webkit-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
-	white-space: nowrap;
+	white-space: nocontainer;
 }
 
 .entry-footer .edit-link a.post-edit-link:hover,
@@ -2197,11 +2047,11 @@ body:not(.greenpi-front-page) .entry-header {
 	margin-top: 1.5em;
 }
 
-.nav-links .nav-previous .nav-title .nav-title-icon-wrapper {
+.nav-links .nav-previous .nav-title .nav-title-icon-containerper {
 	margin-right: 0.5em;
 }
 
-.nav-links .nav-next .nav-title .nav-title-icon-wrapper {
+.nav-links .nav-next .nav-title .nav-title-icon-containerper {
 	margin-left: 0.5em;
 }
 
@@ -2249,11 +2099,6 @@ body:not(.greenpi-front-page) .entry-header {
 
 .site-footer {
 	border-top: 1px solid #eee;
-}
-
-.site-footer .wrap {
-	padding-bottom: 1.5em;
-	padding-top: 2em;
 }
 
 /* Footer widgets */
@@ -2559,7 +2404,7 @@ h2.widget-title {
 /* Text widget */
 
 .widget_text {
-	word-wrap: break-word;
+	word-container: break-word;
 }
 
 .widget_text ul {
@@ -2726,7 +2571,7 @@ h2.widget-title {
 	-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 	width: auto;
-	word-wrap: break-word;
+	word-container: break-word;
 	z-index: 0;
 }
 
@@ -2797,7 +2642,7 @@ object {
 	max-width: 100%;
 }
 
-/* Remove bottom on embeds that wrapped in paragraphs via wpautop. */
+/* Remove bottom on embeds that containerped in paragraphs via wpautop. */
 
 p > embed:only-child,
 p > iframe:only-child,
@@ -3234,15 +3079,6 @@ p > object:only-child {
 
 	/* Front Page */
 
-	.panel-content .wrap {
-		padding-bottom: 2em;
-		padding-top: 3.5em;
-	}
-
-	.page-one-column .panel-content .wrap {
-		max-width: 740px;
-	}
-
 	.panel-content .entry-header {
 		margin-bottom: 4.5em;
 	}
@@ -3315,12 +3151,6 @@ p > object:only-child {
 
 	/* Layout */
 
-	.wrap {
-		max-width: 1000px;
-		padding-left: 3em;
-		padding-right: 3em;
-	}
-
 	.has-sidebar:not(.error404) #primary {
 		float: left;
 		width: 58%;
@@ -3363,29 +3193,6 @@ p > object:only-child {
 		height: auto;
 	}
 
-	.custom-header-media {
-		height: 165px;
-		position: relative;
-	}
-
-	.greenpi-front-page.has-header-image .custom-header-media,
-	.greenpi-front-page.has-header-video .custom-header-media,
-	.home.blog.has-header-image .custom-header-media,
-	.home.blog.has-header-video .custom-header-media {
-		height: 0;
-		position: relative;
-	}
-
-	.has-header-image:not(.greenpi-front-page):not(.home) .custom-header-media,
-	.has-header-video:not(.greenpi-front-page):not(.home) .custom-header-media {
-		bottom: 0;
-		height: auto;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
 	.custom-logo-link {
 		padding-right: 2em;
 	}
@@ -3409,43 +3216,6 @@ p > object:only-child {
 	.site-description {
 		font-size: 16px;
 		font-size: 1rem;
-	}
-
-	/* Navigation */
-
-	.navigation-top {
-		bottom: 0;
-		font-size: 14px;
-		font-size: 0.875rem;
-		left: 0;
-		position: absolute;
-		right: 0;
-		width: 100%;
-		z-index: 3;
-	}
-
-	.navigation-top .wrap {
-		max-width: 1000px;
-		/* The font size is 14px here and we need 50px padding in ems */
-		padding: 0.75em 3.4166666666667em;
-	}
-
-	.navigation-top nav {
-		margin-left: -1.25em;
-	}
-
-	.site-navigation-fixed.navigation-top {
-		bottom: auto;
-		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		width: 100%;
-		z-index: 7;
-	}
-
-	.admin-bar .site-navigation-fixed.navigation-top {
-		top: 32px;
 	}
 
 	/* Main Navigation */
@@ -3642,11 +3412,6 @@ p > object:only-child {
 		top: 2em;
 	}
 
-	.site-header .navigation-top .menu-scroll-down {
-		color: #767676;
-		top: 0.7em;
-	}
-
 	.menu-scroll-down:focus {
 		outline: thin dotted;
 	}
@@ -3663,35 +3428,6 @@ p > object:only-child {
 	.home.blog.has-header-image .site-branding,
 	.home.blog.has-header-video .site-branding {
 		margin-bottom: 70px;
-	}
-
-	.greenpi-front-page.has-header-image .custom-header-media,
-	.greenpi-front-page.has-header-video .custom-header-media,
-	.home.blog.has-header-image .custom-header-media,
-	.home.blog.has-header-video .custom-header-media {
-		height: 1200px;
-		height: 100vh;
-		max-height: 100%;
-		overflow: hidden;
-	}
-
-	.greenpi-front-page.has-header-image .custom-header-media:before,
-	.greenpi-front-page.has-header-video .custom-header-media:before,
-	.home.blog.has-header-image .custom-header-media:before,
-	.home.blog.has-header-video .custom-header-media:before {
-		height: 33%;
-	}
-
-	.admin-bar.greenpi-front-page.has-header-image .custom-header-media,
-	.admin-bar.greenpi-front-page.has-header-video .custom-header-media,
-	.admin-bar.home.blog.has-header-image .custom-header-media,
-	.admin-bar.home.blog.has-header-video .custom-header-media {
-		height: calc(100vh - 32px);
-	}
-
-	.panel-content .wrap {
-		padding-bottom: 4.5em;
-		padding-top: 6em;
 	}
 
 	.panel-image {
@@ -3937,17 +3673,17 @@ p > object:only-child {
 		position: relative;
 	}
 
-	.nav-title-icon-wrapper {
+	.nav-title-icon-containerper {
 		position: absolute;
 		text-align: center;
 		width: 2em;
 	}
 
-	.nav-links .nav-previous .nav-title .nav-title-icon-wrapper {
+	.nav-links .nav-previous .nav-title .nav-title-icon-containerper {
 		left: -2em;
 	}
 
-	.nav-links .nav-next .nav-title .nav-title-icon-wrapper {
+	.nav-links .nav-next .nav-title .nav-title-icon-containerper {
 		right: -2em;
 	}
 
@@ -4036,16 +3772,6 @@ p > object:only-child {
 
 @media screen and ( min-width: 67em ) {
 
-	/* Layout */
-
-	/* Navigation */
-	.navigation-top .wrap {
-		padding: 0.75em 2em;
-	}
-
-	.navigation-top nav {
-		margin-left: 0;
-	}
 
 	/* Sticky posts */
 
@@ -4095,14 +3821,6 @@ p > object:only-child {
 	.page-two-column .entry-content blockquote.alignright,
 	.greenpi-front-page .entry-content blockquote.alignright {
 		margin-right: -20%;
-	}
-}
-
-@media screen and ( max-width: 48.875em ) and ( min-width: 48em ) {
-
-	.admin-bar .site-navigation-fixed.navigation-top,
-	.admin-bar .site-navigation-hidden.navigation-top {
-		top: 46px;
 	}
 }
 
@@ -4186,20 +3904,10 @@ p > object:only-child {
 
 	/* Layout */
 
-	.wrap {
-		padding-left: 5% !important;
-		padding-right: 5% !important;
-		max-width: none;
-	}
-
 	/* Site Branding */
 
 	.site-header {
 		background: transparent;
-		padding: 0;
-	}
-
-	.custom-header-media {
 		padding: 0;
 	}
 

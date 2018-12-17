@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div class="container">
 
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
@@ -56,6 +56,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+</div><!-- .container -->
 
 <?php get_footer();

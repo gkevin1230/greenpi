@@ -13,17 +13,21 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'greenpi' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<div class="container">
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+			<?php the_custom_logo(); ?>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+			<?php if ( ( greenpi_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
+			<a href="#content" class="menu-scroll-down"><?php echo greenpi_get_svg( array( 'icon' => 'arrow-right' ) ); ?><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'greenpi' ); ?></span></a>
+			<?php endif; ?>
 
+			<?php if ( has_nav_menu( 'top' ) ) : ?>
+					<div class="navigation-top">
+						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+					</div><!-- .navigation-top -->
+				<?php endif; ?>
+
+		</div><!-- .container -->
 	</header><!-- #masthead -->
 
 	<?php
@@ -39,5 +43,4 @@
 	endif;
 	?>
 
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+	<div id="content" class="site-content">
