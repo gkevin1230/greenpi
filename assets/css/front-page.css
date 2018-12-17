@@ -18,6 +18,7 @@ section .text p {
     color: #8c8c8c;
     font-size: 1.5em;
     font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 /*************************/
@@ -349,6 +350,7 @@ section .text p {
     color: #8c8c8c;
     font-size: 1.4em;
     font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    font-weight: 300;
 }
 .data .social {
     list-style: none;
