@@ -246,4 +246,7 @@
 		$body.addClass( 'has-header-video' );
 	});
 
+	//Module AOS
+	AOS.init();
+
 })( jQuery );

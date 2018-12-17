@@ -18,11 +18,6 @@ section {
 	display: block;
 }
 
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
 figcaption,
 figure,
 main {
@@ -390,12 +385,6 @@ h4:first-child,
 h5:first-child,
 h6:first-child {
 	padding-top: 0;
-}
-
-h1 {
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-weight: 300;
 }
 
 h2,
@@ -3022,10 +3011,6 @@ p > object:only-child {
 		font-size: 1.125rem;
 	}
 
-	h1 {
-		font-size: 30px;
-		font-size: 1.875rem;
-	}
 
 	h2,
 	.home.blog .entry-title,
@@ -3870,10 +3855,6 @@ p > object:only-child {
 
 	body {
 		font-size: 12pt;
-	}
-
-	h1 {
-		font-size: 24pt;
 	}
 
 	h2 {

@@ -175,7 +175,7 @@ get_header(); ?>
 			</div> 
 			<div class="team_card">
 				<div class="photo">
-					<img data-aos="fade-up" data-aos-delay="500" src="/_nuxt/resources/assets/img/florent-boutin.jpg" alt="Florent Boutin CEO GreenPI" class="aos-init aos-animate">
+					<img data-aos="fade-up" data-aos-delay="500" src="<?php echo get_template_directory_uri(); ?>/assets/images/florent-boutin.jpg" alt="Florent Boutin CEO GreenPI" class="aos-init aos-animate">
 				</div> 
 				<div class="data">
 					<div class="presentation">
@@ -187,16 +187,16 @@ get_header(); ?>
 									Mon métier me prend beaucoup de temps et je ne pouvais plus m'occuper de ma serre... Je vous laisse deviner la suite.</p> 
 					<ul class="social left">
 						<a data-aos="fade-right" data-aos-delay="700" href="https://www.facebook.com/florent.boutin3" target="_blank" class="aos-init">
-							<li><i class="fa fa-facebook"></i></li>
+							<li><span class="typcn typcn-social-facebook"></span></li>
 						</a> 
 						<a data-aos="fade-right" data-aos-delay="900" href="https://twitter.com/Florent_boutin" target="_blank" class="aos-init">
-							<li><i class="fa fa-twitter"></i></li>
+							<li><span class="typcn typcn-social-twitter"></span></li>
 						</a> 
 						<a data-aos="fade-right" data-aos-delay="1100" href="https://www.linkedin.com/in/florent-boutin-55425b39/" target="_blank" class="aos-init">
-							<li><i class="fa fa-linkedin"></i></li>
+							<li><span class="typcn typcn-social-linkedin"></span></li>
 						</a> 
 						<a data-aos="fade-right" data-aos-delay="1300" href="https://github.com/Skalv" target="_blank" class="aos-init">
-							<li><i class="fa fa-github"></i></li>
+							<li><span class="typcn typcn-social-github"></span></li>
 						</a>
 					</ul>
 				</div>
@@ -204,7 +204,7 @@ get_header(); ?>
 			
 			<div class="team_card right">
 				<div class="photo">
-					<img data-aos="fade-up" data-aos-delay="800" src="/_nuxt/resources/assets/img/kevin-geiger.jpg" alt="Florent Boutin CEO GreenPI" class="aos-init">
+					<img data-aos="fade-up" data-aos-delay="800" src="<?php echo get_template_directory_uri(); ?>/assets/images/kevin-geiger.jpg" alt="Florent Boutin CEO GreenPI" class="aos-init">
 				</div> 
 				<div class="data">
 					<div class="presentation">
@@ -215,10 +215,13 @@ get_header(); ?>
 									L'opportunité de rendre la <span class="green">vie plus facile</span> à des milliers de personnes grâce à des technologies innovantes tout <span class="green">en respectant l'environnement</span> s'est présentée, je me devais de la saisir.</p> 
 					<ul class="social right">
 						<a data-aos="fade-left" data-aos-delay="800" href="https://www.facebook.com/kevin.geiger76" target="_blank" class="aos-init">
-							<li><i class="fa fa-facebook"></i></li>
+							<li><span class="typcn typcn-social-facebook"></span></li>
 						</a> 
 						<a data-aos="fade-left" data-aos-delay="500" href="https://www.behance.net/gpicture" target="_blank" class="aos-init">
-							<li><i class="fa fa-behance"></i></li></a> <a data-aos="fade-left" data-aos-delay="300" href="https://www.linkedin.com/in/k%C3%A9vin-geiger-08381b121/" target="_blank" class="aos-init"><li><i class="fa fa-linkedin"></i></li>
+							<li><span class="typcn typcn-social-behance"></span></li>
+						</a> 
+						<a data-aos="fade-left" data-aos-delay="300" href="https://www.linkedin.com/in/k%C3%A9vin-geiger-08381b121/" target="_blank" class="aos-init">
+							<li><span class="typcn typcn-social-linkedin"></span></li>
 						</a>
 					</ul>
 				</div>

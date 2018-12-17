@@ -410,6 +410,7 @@ add_action( 'wp_head', 'greenpi_colors_css_container' );
 function greenpi_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'greenpi-fonts', greenpi_fonts_url(), array(), null );
+	wp_enqueue_style( 'typicons', get_template_directory_uri() . '/assets/fonts/typicons.min.css' );
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'greenpi-style', get_stylesheet_uri() );
@@ -421,12 +422,17 @@ function greenpi_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/bootstrap.min.css' );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/bootstrap.bundle.min.js', array( 'jquery' ) );
 
+	//AOS JS
+	wp_enqueue_style( 'aos', get_template_directory_uri() . '/assets/aos-js/aos.css' );
+	wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/aos-js/aos.js', array( 'jquery' ) );
+
 	//Parts styles
 	wp_enqueue_style( 'components', get_template_directory_uri() . '/assets/css/components.css' );
 	wp_enqueue_style( 'header', get_template_directory_uri() . '/assets/css/header.css' );
 	wp_enqueue_style( 'footer', get_template_directory_uri() . '/assets/css/footer.css' );
 	wp_enqueue_style( 'front-page', get_template_directory_uri() . '/assets/css/front-page.css' );
 	wp_enqueue_style( 'static-page', get_template_directory_uri() . '/assets/css/static-page.css' );
+
 
 	// Load the dark colorscheme.
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {

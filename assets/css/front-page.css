@@ -148,7 +148,7 @@ section .text p {
 
 .concept-element:hover, .concept-element:focus {
     cursor: pointer;
-    -webkit-transform: scale(2.5);
+    -webkit-transform: scale(2.5) !important;
     transform: scale(2.5);
     box-shadow: 0px 0px 30px 0px rgba(111, 184, 27, 0.4);
     border: 2px solid #72b901;
@@ -275,10 +275,106 @@ section .text p {
 }
 
 /*************************/
-/*     Testimonials      */
+/*          Team         */
 /*************************/
 
-
+.team .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .text {
+    align-items: center;
+}
+.container .team_card {
+    margin-top: 6em;
+    display: flex;
+}
+.team_card .photo {
+    width: 45%;
+    margin-top: 1.5em;
+    z-index: 20;
+    position: relative;
+}
+.team_card.right .photo {
+    text-align: right;
+    order: 2;
+}
+.team_card .photo img {
+    width: 450px;
+    height: 462px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 88px -19px rgba(0, 0, 0, 0.55);
+}
+.team_card .data {
+    width: 50%;
+}
+.team_card.right .data {
+    text-align: right;
+    order: 1;
+}
+.data .presentation {
+    margin-left: -150px;
+    margin-top: 20px;
+    z-index: 50;
+    position: relative;
+    overflow: hidden;
+}
+.team_card.right .data .presentation {
+    margin: 20px -150px 0 0;
+    z-index: 50;
+    position: relative;
+    overflow: hidden;
+}
+.presentation h3 {
+    font-size: 2.8em;
+    color: #595959;
+    background-color: #fff;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+.presentation .job {
+    color: #ffffff;
+    font-style: italic;
+    font-size: 1.1em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: -1em;
+    background: linear-gradient(to left, #b8d038 0%, #72b901 100%);
+    padding: 5px 15px;
+    display: inline-block;
+}
+.data .bio {
+    color: #8c8c8c;
+    font-size: 1.4em;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+}
+.data .social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.data .social a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.social a li {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #b0b0b0;
+    display: flex;
+    border-radius: 8px;
+    opacity: 0.5;
+}
+.social a li:hover {
+    opacity: 1;
+}
+.social a li span {
+    font-size: 1.5em;
+    margin: auto;
+}
 
 /*********************/
 /*   MEDIA QUERIES   */
