@@ -413,6 +413,7 @@ section .text p {
     }
     .introduction{
         height: 100%;
+        padding-top: 140px;
     }
     .introduction .text{
         background: rgba(255,255,255,0.8);
@@ -473,6 +474,9 @@ section .text p {
         width: 100% !important;
         padding: 0 15px;
         box-sizing: border-box !important;
+    }
+    .introduction {
+        padding-top: 80px;
     }
     .concept .concept-box{
         height: 100%;

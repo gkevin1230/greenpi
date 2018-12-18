@@ -31,10 +31,11 @@ header .container {
     position: relative;
     transition: all 0.05s;
     padding: 0 0.35em;
-    font-family: 'Muli',Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    font-family: 'Roboto Condensed',Arial,sans-serif;
 }
 
-.navigation-top a .menu_item-name::before {
+.navigation-top a::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -52,4 +53,63 @@ header .container {
     transition: transform 0.5s, -webkit-transform 0.5s;
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     background: #d7dd2c;
+}
+
+.navigation-top a:hover {
+    color: #71b90f;
+}
+
+.navigation-top li:hover a::before {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+
+/*********************/
+/*    MENU MOBILE    */
+/*********************/
+@media (max-width: 767.99px) {
+    .menu-toggle{
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #222;
+        display: none;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: 800;
+        line-height: 1.5;
+        margin: 1px auto 2px;
+        padding: 1em;
+        text-shadow: none;
+    }
+    .main-navigation{
+        position: absolute;
+        top: 0;
+    }
+    .main-navigation button:hover {
+        color: #767676;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .main-navigation.toggled-on {
+        display: block;
+    }
+    .main-navigation.toggled-on > div > ul {
+        display: block;
+    }
+}
+
+/*********************/
+/*   MEDIA QUERIES   */
+/*********************/
+
+/* Medium devices (tablets 992px and up)*/
+@media (max-width: 991.99px) {
+    header.site-header {
+        position: relative;
+    }
 }
