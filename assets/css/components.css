@@ -75,7 +75,7 @@ h1, h2{
   font-weight: 900;
 }
 
-a, button, li, img, div, h1, h2, h3, h4, p, span {
+a, button, .btn, li, img, div, h1, h2, h3, h4, p, span {
   transition: all 0.35s;
 }
 

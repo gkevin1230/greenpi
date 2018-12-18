@@ -11,7 +11,7 @@ get_header(); ?>
 				<br>intelligent et connecté</h1> 
 				<p>Et si votre jardin se gérait tout seul ?<br> 
 				La nature sait le faire, laissez nous lui donner un coup de main !</p> 
-				<a href="#" class="btn btn-primary">Découvrir GreenPi</a>
+				<a href="#Concept" class="btn btn-primary">Découvrir GreenPi</a>
 			</div>
 		</div>
 	</section> <!-- #Accueil -->

@@ -28,19 +28,13 @@ section .text p {
     background-image: url(../images/presentation-principale-greenpi.jpg);
     background-repeat: no-repeat;
     background-position: top right;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 .introduction h1{
-    margin: 2.5em 0 0.5em 0;
+    margin-bottom:1em;
     font-size: 4.5em;
-}
-.introduction .text .hr{
-    content: '';
-    width: 100px;
-    height: 10px;
-    margin-bottom: 15px;
-    background-color: #a7ab3b;
-    background: linear-gradient(to left, #d7dd2c 0%, #bfdd2d 100%);
-    margin: 0 auto;
 }
 .introduction .text p {
     color: #8c8c8c;
@@ -58,6 +52,15 @@ section .text p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.concept .text .hr{
+    content: '';
+    width: 100px;
+    height: 10px;
+    margin-bottom: 15px;
+    background-color: #a7ab3b;
+    background: linear-gradient(to left, #d7dd2c 0%, #bfdd2d 100%);
+    margin: 0 auto;
 }
 .concept-box .concept-logo-center {
     background: url(../images/logo-concept.jpg) no-repeat 50% #fff;
@@ -118,6 +121,7 @@ section .text p {
     opacity: 0;
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
+    font-weight: 700;
 }
 .texte-concept span {
     content: '';
@@ -136,6 +140,7 @@ section .text p {
     opacity: 0;
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
+    margin: 1em 0;
 }
 
 /*Chaque elements*/
@@ -329,6 +334,7 @@ section .text p {
 }
 .presentation h3 {
     font-size: 2.8em;
+    font-weight: 700;
     color: #595959;
     background-color: #fff;
     padding: 5px 15px;
@@ -420,6 +426,44 @@ section .text p {
     .introduction .text .btn{
         margin: 0 auto 40px auto;
     }
+
+    .testimonials {
+        margin-top: 0px;
+    }
+
+    .team .container .team_card {
+        flex-direction: column;
+    }
+    .team_card.right .photo {
+        text-align: center;
+        order: 1;
+    }
+    .team_card.right .data {
+        text-align: left;
+        order: 2;
+    }
+    .team_card.right .data .presentation{
+        margin: 0;
+        text-align: center;               
+    }
+    .data .social.right{
+        float: left;
+    }
+    .team_card .photo {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    .team_card .data {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .team_card .data   .presentation{
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+
 }
 
 /* Medium devices (tablets 992px and up)*/
@@ -466,6 +510,7 @@ section .text p {
     .concept-element .texte-concept h4 {
         font-size: 1.2em;
         opacity: 1;
+        margin: 20px 0;
     }
     .concept-element .texte-concept p{
         font-size: 1em;
@@ -474,9 +519,9 @@ section .text p {
     .concept-element .texte-concept span{
         opacity: 1;
     }
-    .concept-element :hover, .concept-element:focus{
+    .concept-element:hover, .concept-element:focus{
         cursor: pointer;
-        transform: none;
+        transform: none !important;
         box-shadow: 0px 0px 30px 5px rgba(111,184,27,0.4);
         border: 5px solid #72b901;
     }
@@ -493,6 +538,31 @@ section .text p {
     .concept-fleur-center{
         display: none;
     }
+
+    .box .container {
+        flex-direction: column;
+    }
+    .box .container img {
+         display: none;
+    }
+
+    .testimonials .cards {
+        flex-direction: column;
+    }
+    .testimonials .cards .card {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 1.5em;
+    }
+
+    .team .container .team_card {
+        flex-direction: column;
+    }
+    .team .container .photo img{
+        width: 50%;
+        height: auto;
+    }
+
 }
 
 /* Mobile Device (less than 768px)*/
@@ -500,20 +570,41 @@ section .text p {
     section{
         padding: 3em 0;
     }
-    .introduction {
-      height: 100%;
-    }
-    .text h1, .text h2{
+    section .text h1, section .text h2{
         font-size: 2.5em;
+    }
+    .introduction {
+        height: 100%;
     }
     .concept .concept-box{
         width: 480px;
+    }
+    .testimonials .container .cards {
+        margin: 4em 0 0 0;
     }
 }
 
 /* Extra small Mobile Device (less than 536px)*/
 @media (max-width: 535.99px) {
-  .content .concept .concept-box{
-        width: 220px;
-  }
+    .concept .concept-box {
+        width: 100%;
+    }
+    .concept-box .concept-global-element{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .team_card .photo{
+        margin: 0px -15px !important;
+        width: calc(100% + 30px);
+    }
+    .team .container .photo img{
+        margin: 15px -15px;
+        width: calc(100% + 30px);
+        height: auto;
+        box-shadow: none;
+        border-radius: 0;
+    } 
+
 }

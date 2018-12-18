@@ -2082,20 +2082,7 @@ body:not(.greenpi-front-page) .entry-header {
 	margin-bottom: 3em;
 }
 
-/*--------------------------------------------------------------
-13.6 Footer
---------------------------------------------------------------*/
 
-.site-footer {
-	border-top: 1px solid #eee;
-}
-
-/* Footer widgets */
-
-.site-footer .widget-area {
-	padding-bottom: 2em;
-	padding-top: 2em;
-}
 
 /* Social nav */
 
@@ -3084,13 +3071,6 @@ p > object:only-child {
 		font-size: 1rem;
 	}
 
-	/* Site Footer */
-
-	.site-footer {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
 	/* Gallery Columns */
 
 	.gallery-item {
@@ -3688,25 +3668,6 @@ p > object:only-child {
 		margin-bottom: 2em;
 	}
 
-	/* Footer */
-
-	.site-footer {
-		font-size: 14px;
-		font-size: 0.875rem;
-		line-height: 1.6;
-		margin-top: 3em;
-	}
-
-	.site-footer .widget-column.footer-widget-1 {
-		float: left;
-		width: 36%;
-	}
-
-	.site-footer .widget-column.footer-widget-2 {
-		float: right;
-		width: 58%;
-	}
-
 	.social-navigation {
 		clear: left;
 		float: left;
@@ -3957,7 +3918,4 @@ p > object:only-child {
 		width: 34%;
 	}
 
-	.site-footer {
-		padding: 0;
-	}
 }

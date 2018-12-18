@@ -1,0 +1,30 @@
+footer {
+    background-color: #313231;
+    padding: 0 50px;
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p, footer ul {
+    width: 350px;
+}
+footer .imgContainer {
+    flex: 1;
+    text-align: center;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+footer ul a {
+    color: #313231;
+}
+footer ul li {
+    font-size: 2em;
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.2);
+}
