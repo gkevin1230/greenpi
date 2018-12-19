@@ -965,15 +965,6 @@ input[type="submit"].secondary {
 	color: #222;
 }
 
-button:hover,
-button:focus,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-	background: #767676;
-}
-
 button.secondary:hover,
 button.secondary:focus,
 input[type="reset"]:hover,
@@ -1255,11 +1246,6 @@ a:hover .nav-title,
 .main-navigation .page_item_has_children > a > .icon,
 .main-navigation ul a > .icon {
 	display: none;
-}
-
-.main-navigation > div > ul {
-	border-top: 1px solid #eee;
-	padding: 0.75em 1.695em;
 }
 
 .js .main-navigation.toggled-on > div > ul {
@@ -3023,11 +3009,6 @@ p > object:only-child {
 	}
 
 	/* Layout */
-
-	.has-sidebar:not(.error404) #primary {
-		float: left;
-		width: 58%;
-	}
 
 	.has-sidebar #secondary {
 		float: right;

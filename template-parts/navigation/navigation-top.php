@@ -2,7 +2,6 @@
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
 		<?php
 		echo greenpi_get_svg( array( 'icon' => 'bars' ) );
-		echo greenpi_get_svg( array( 'icon' => 'close' ) );
 		_e( 'Menu', 'greenpi' );
 		?>
 	</button>

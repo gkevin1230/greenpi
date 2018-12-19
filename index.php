@@ -5,6 +5,7 @@ get_header(); ?>
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<header class="page-header">
 			<h1 class="page-title"><?php single_post_title(); ?></h1>
+			<div class="hr"></div>
 		</header>
 	<?php else : ?>
 	<header class="page-header">
@@ -45,7 +46,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
 </div><!-- .container -->
 
 <?php get_footer();

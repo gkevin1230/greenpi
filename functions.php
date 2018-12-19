@@ -431,6 +431,7 @@ function greenpi_scripts() {
 	wp_enqueue_style( 'header', get_template_directory_uri() . '/assets/css/header.css' );
 	wp_enqueue_style( 'footer', get_template_directory_uri() . '/assets/css/footer.css' );
 	wp_enqueue_style( 'front-page', get_template_directory_uri() . '/assets/css/front-page.css' );
+	wp_enqueue_style( 'blog-page', get_template_directory_uri() . '/assets/css/blog-page.css' );
 	wp_enqueue_style( 'static-page', get_template_directory_uri() . '/assets/css/static-page.css' );
 
 

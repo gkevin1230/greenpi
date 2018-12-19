@@ -1,6 +1,7 @@
 header.site-header {
     width: 100%;
     background: rgba(255, 255, 255, 0.98);
+    border-bottom: 2px solid #f7f7f7;
     z-index: 99999;
     position: fixed;
 }
@@ -75,31 +76,72 @@ header .container {
         border: 0;
         -webkit-box-shadow: none;
         box-shadow: none;
-        color: #222;
+        color: rgb(97, 97, 97);
         display: none;
         font-size: 14px;
-        font-size: 0.875rem;
+        font-size: 1em;
         font-weight: 800;
         line-height: 1.5;
         margin: 1px auto 2px;
         padding: 1em;
         text-shadow: none;
+        display: inline-flex;;
+    }
+    .menu-toggle .icon{
+        top: 3px;
+        right: 5px;
+    }
+    .menu-toggle:hover{
+        color: #767676;
     }
     .main-navigation{
         position: absolute;
-        top: 0;
-    }
-    .main-navigation button:hover {
-        color: #767676;
-    }
-    .menu-toggle {
-        display: block;
+        top: 12px;
     }
     .main-navigation.toggled-on {
         display: block;
     }
+    .main-navigation.toggled-on .menu-top-menu-container:before{
+        display: block;
+    }
     .main-navigation.toggled-on > div > ul {
         display: block;
+        margin: 0;
+    }
+
+    /*Sous-menu*/
+    .main-navigation.toggled-on .menu-top-menu-container{
+        display: block;
+        background: #fff;
+        margin-top: 0;
+        position: absolute;
+        top: 110px;
+        right: 15px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 14px 45px -5px rgba(0, 0, 0, 0.52);
+        transition: all 0.40s;
+    }
+    .menu-top-menu-container:before {
+        content: '';
+        display: none;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: -7px;
+        right: 20px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background: #fff;
+    }
+    .main-navigation.toggled-on .menu-top-menu-container ul li{
+        list-style: none;
+        padding: 10px 20px;
+    }
+    .main-navigation.toggled-on .menu-top-menu-container ul li a{
+        padding: 5px;
+        margin: 0;
+        text-align: center;
     }
 }
 
@@ -111,5 +153,6 @@ header .container {
 @media (max-width: 991.99px) {
     header.site-header {
         position: relative;
+        padding: 0 15px;
     }
 }

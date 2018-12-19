@@ -52,6 +52,11 @@ button.btn-primary:hover, a.btn-primary:hover {
     transform: scale(1.02) translateY(-2px);
 }
 
+button:focus {
+  outline: 1px dotted;
+  outline: none;
+}
+
 .left{ float: left; } 
 .right{ float: right; }
 
