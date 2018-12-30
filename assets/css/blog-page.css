@@ -1,3 +1,4 @@
+/*PAGE DU BLOG*/
 .blog .page-header h1 {
     font-family: 'Roboto',Arial,sans-serif;
     color: #4D4D4D;
@@ -25,4 +26,29 @@
     background: #c5d2d9 no-repeat 50%;
     background-size: cover;
     display: block;
+}
+.blog .post-card-tags{
+    background: #71b90f;
+    background: -webkit-gradient(linear,right top,left top,from(#b8d038),to(#72b901));
+    background: linear-gradient(270deg,#b8d038 0,#72b901);
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    z-index: 999;
+}
+.blog .post-card-tags a {
+    color: #fff;
+}
+.blog .entry-title a{
+    font-weight: 800;
+    font-size: 1.1em;
+    margin: 0.5em 1.4em 0 0;
+    color: #4D4D4D;
+}
+
+/*ARTCLE BLOG*/
+.blog .site-main > article, .archive .site-main > article, .search .site-main > article{
+    position: relative;
 }

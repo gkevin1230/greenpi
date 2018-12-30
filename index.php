@@ -1,4 +1,7 @@
 <?php
+/*
+PAGE BLOG
+*/
 get_header(); ?>
 
 <div class="container">
@@ -15,13 +18,14 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+	
 			<?php
 			if ( have_posts() ) :
 
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
-
+				$categories = get_the_category(); 
+				$cat_name = $categories[0]->cat_name;
 					/*
 					 * Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file

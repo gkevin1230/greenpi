@@ -1,4 +1,7 @@
 <?php
+/*
+PAGE STATIQUE
+*/
 get_header(); ?>
 
 <div class="container">

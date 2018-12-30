@@ -8,6 +8,8 @@
  * @subpackage greenpi
  * @since 1.0
  * @version 1.0
+ * 
+ * PAGE D'UN ARTICLE
  */
 
 get_header(); ?>
@@ -18,6 +20,7 @@ get_header(); ?>
 
 			<?php
 			/* Start the Loop */
+
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/post/content', get_post_format() );
