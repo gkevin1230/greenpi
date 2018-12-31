@@ -8,7 +8,10 @@
  * @subpackage greenpi
  * @since 1.0
  * @version 1.2
- */
+ *
+ *
+ * PAGE D'UN ARTICLE 
+*/
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php if( !is_sticky() ) { echo 'class="col-sm-6"'; }else{ post_class(); } ?>>

@@ -15,15 +15,15 @@ if ( ! function_exists( 'greenpi_posted_on' ) ) :
  */
 function greenpi_posted_on() {
 
+
+	$category = get_the_category();
+
 	// Get the author name; container it in a link.
-	$byline = sprintf(
-		/* translators: %s: post author */
-		__( 'by %s', 'greenpi' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
-	);
+	$byline = 
+		'Ecrit le <span class="posted-on">' . greenpi_time_link() . '</span><span class="byline"> ' . $byline . '</span> dans <a href="'.get_category_link($category[0]->cat_ID).'">'.$category[0]->cat_name.'</a>';
 
 	// Finally, let's write all of this to the page.
-	echo '<span class="posted-on">' . greenpi_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+	echo $byline;
 }
 endif;
 

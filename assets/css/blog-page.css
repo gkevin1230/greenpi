@@ -1,5 +1,5 @@
 /*PAGE DU BLOG*/
-.blog .page-header h1 {
+.blog .page-header h1, .single .entry-header{
     font-family: 'Roboto',Arial,sans-serif;
     color: #4D4D4D;
     font-size: 2.3em;
@@ -7,7 +7,7 @@
     text-align: center;
     margin: 1em 0 1em 0;
 }
-.blog .hr {
+.blog .hr, .single .hr {
     content: "";
     width: 120px;
     height: 20px;
@@ -16,8 +16,32 @@
     background-color: #d7dd2c;
     background: linear-gradient(270deg,#d7dd2c 0,#bfdd2d);
 }
-.blog .post-thumbnail{
+.blog #main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog p, .single p{
+    margin: 1.5em 0;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+/*Sticky*/
+.blog article.sticky{
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 2em;
+}
+.blog article.sticky .post-thumbnail{
     height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blog .post-thumbnail{
     overflow: hidden;
     border-radius: 10px;
 }
@@ -47,8 +71,48 @@
     margin: 0.5em 1.4em 0 0;
     color: #4D4D4D;
 }
-
-/*ARTCLE BLOG*/
 .blog .site-main > article, .archive .site-main > article, .search .site-main > article{
     position: relative;
+    margin-bottom: 4em;
+    padding: 0 15px;
+}
+
+/*PAGE ARTICLE*/
+.entry-content{
+    margin-bottom: 100px;
+}
+.entry-content .post-full-content {
+    width: 700px;
+    max-width: 100%;
+    margin: 1em auto 0;
+    padding-top: 15px;
+}
+.single-featured-image-header {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.single .entry-meta{
+    color: #a2a2a2;
+    text-align: center;
+    margin: .5em 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.single h2 {
+    font-size: 2rem;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: .5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.single h2:before {
+    content: '';
+    background: #d9de22;
+    width: 15px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 0;
 }
