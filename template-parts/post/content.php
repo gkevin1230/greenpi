@@ -10,17 +10,11 @@
  * @version 1.2
  *
  *
- * PAGE D'UN ARTICLE 
+ * PAGE D'UN ARTICLE Sur la page blog
 */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php if( !is_sticky() ) { echo 'class="col-sm-6"'; }else{ post_class(); } ?>>
-
-	<?php
-	if ( is_sticky() && is_home() ) :
-		echo greenpi_get_svg( array( 'icon' => 'thumb-tack' ) );
-	endif;
-	?>
 
 	<!-- get the gategory -->
 	<?php 
@@ -51,12 +45,8 @@
 
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
-				if ( is_single() ) {
 					greenpi_posted_on();
-				} else {
 					echo greenpi_time_link();
-					greenpi_edit_link();
-				};
 			echo '</div><!-- .entry-meta -->';
 		};
 		?>
