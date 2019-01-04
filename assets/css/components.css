@@ -4,16 +4,14 @@
 
 /*COULEURS*/
 
-/*$green: #71b90f;
-$darkgreen: #5b960b;
-$dryGreen: #d7dd2c;
-$lightDryGreen: #e1e661;
-$dryGreenText: #a7ab3b;
+/*
 $footerGrey: #313231;
 $lightGrey: #b0b0b0;
 $contentGrey: #8c8c8c;
 $contentBlack: #2a2a2a;
 $teamBlack: #595959;
+$green: #71b90f;
+$darkgreen: #5b960b;
 $white: #ffffff;
 $red: #ef5555;
 $darkred: #d24443;
@@ -91,7 +89,12 @@ a, button, .btn, li, img, div, h1, h2, h3, h4, p, span {
   transition: all 0.35s;
 }
 
-.entry-content a{
+/*Interne page*/
+#main{
+  margin-bottom: 6em;
+}
+
+.entry-content a, .entry-meta a{
   color: #474747;
   transition: all 0.1s;
   font-weight: 600;
@@ -103,7 +106,7 @@ a, button, .btn, li, img, div, h1, h2, h3, h4, p, span {
   text-decoration: none;
   white-space: nowrap;
 }
-.entry-content a::before {
+.entry-content a::before, .entry-meta a::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -117,14 +120,25 @@ a, button, .btn, li, img, div, h1, h2, h3, h4, p, span {
   -webkit-transform: translateY(95%);
   transform: translateY(95%);
 }
-.entry-content a:hover {
+.entry-content a:hover, .entry-content a:focus, .entry-meta a:hover, .entry-meta a:focus {
   outline: 0;
   color: #474747;
   text-decoration: none;
 }
-.entry-content a:hover::before, .entry-content a:focus::before {
+.entry-content a:hover::before, .entry-content a:focus::before, .entry-meta a:hover::before, .entry-meta a:focus::before {
   -webkit-transform: translateY(0);
   transform: translateY(0);
+}
+
+/*Breadcrumb*/
+#breadcrumbs{
+  margin-left: 15px;
+  font-size: 0.9em;
+  color: #8c8c8c;
+}
+
+#breadcrumbs a{
+  color: #71b90f;
 }
 
 /*********************/

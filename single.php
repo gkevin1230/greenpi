@@ -15,6 +15,7 @@
 get_header(); ?>
 
 <div class="container">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -28,6 +29,14 @@ get_header(); ?>
 			<div class="hr"></div>
 
 			<?php
+
+			/*Breadcrumb yoast SEO*/
+			if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('
+				<p id="breadcrumbs">','</p>');
+			}
+
+			/*Image principale*/
 			if ( ( is_single() || ( is_page() && ! greenpi_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
 				echo '<div class="single-featured-image-header">';
 				echo get_the_post_thumbnail( get_queried_object_id(), 'greenpi-featured-image' );

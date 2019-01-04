@@ -14,7 +14,7 @@
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php if( !is_sticky() ) { echo 'class="col-sm-6"'; }else{ post_class(); } ?>>
+<article id="post-<?php the_ID(); ?>" <?php if( !is_sticky() || is_category() ) { echo 'class="col-sm-6"'; }else{ post_class(); } ?>>
 
 	<!-- get the gategory -->
 	<?php 
@@ -46,7 +46,6 @@
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
 					greenpi_posted_on();
-					echo greenpi_time_link();
 			echo '</div><!-- .entry-meta -->';
 		};
 		?>

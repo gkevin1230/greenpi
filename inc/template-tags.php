@@ -16,14 +16,16 @@ if ( ! function_exists( 'greenpi_posted_on' ) ) :
 function greenpi_posted_on() {
 
 	global $post;
-	$author=$post->post_author;
+	$author = $post->post_author;
+	$author_name = get_the_author_meta( 'first_name' , $author );
+
 	$category = get_the_category();
 
 	// Get the author name; container it in a link.
 	if ( is_single() ) {
-		$byline = '<p>Ecrit par <span class="author" rel="author">'.get_the_author_meta( 'first_name', $author ).'</span> le <span class="posted-on">' . greenpi_time_link() . '</span><span class="byline"> ' . $byline . '</span> dans <a href="'.get_category_link($category[0]->cat_ID).'">'.$category[0]->cat_name.'</a></p>';
+		$byline = '<p class="text-center">Écrit par <span class="author" rel="author">'. $author_name .'</span> le ' . greenpi_time_link() . ' dans <a href="'.get_category_link($category[0]->cat_ID).'">'.$category[0]->cat_name.'</a></p>';
 	} else {
-		$byline = '<p class="text-left">Ecrit par <span class="author" rel="author">'.get_the_author_meta( 'first_name' ).'</span></p>';
+		$byline = '<p class="text-left">Écrit par <span class="author" rel="author">'. $author_name .'</span> le ' . greenpi_time_link(). '</p>';
 	};
 	// Finally, let's write all of this to the page.
 	echo $byline;
@@ -41,46 +43,20 @@ function greenpi_time_link() {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$time_string_content = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string_content = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
-
 	$time_string = sprintf( $time_string,
 		get_the_date( DATE_W3C ),
 		get_the_date(),
 		get_the_modified_date( DATE_W3C ),
 		get_the_modified_date()
-	);
+	);	
 
-	$time_string_content = sprintf( $time_string_content,
-		get_the_date( DATE_W3C ),
-		get_the_date('d M'),
-		get_the_modified_date( DATE_W3C ),
-		get_the_modified_date('d M')
-	);
-
-	$time_string_content = sprintf( $time_string_content, 
-							get_the_date('d M'));
-
-	
 	$date_single = sprintf(
 		/* translators: %s: post date */
 		__( '<span class="screen-reader-text">Posted on</span> %s', 'greenpi' ),
-		'<span>' . $time_string . '</span>');
-
-	$date_content = sprintf(
-		/* translators: %s: post date */
-		__( '<span class="screen-reader-text">Posted on</span> %s', 'greenpi' ),
-		'<span>' . $time_string_content . '</span>');
-
+		$time_string);
 
 	// container the time string in a link, and preface it with 'Posted on'.
-	if ( is_single() ) {
-		return $date_single;
-	}else{
-		return $date_content;
-	};
+	return $date_single;
 
 }
 endif;

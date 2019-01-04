@@ -16,6 +16,14 @@ get_header(); ?>
 	</header>
 	<?php endif; ?>
 
+	<?php
+		/*Breadcrumb yoast SEO*/
+		if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb('
+			<p id="breadcrumbs">','</p>');
+		}
+	?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 	
