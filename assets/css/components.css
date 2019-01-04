@@ -84,6 +84,24 @@ h1, h2{
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
 }
+body:not(.home) h2 {
+  font-size: 2rem;
+  position: relative;
+  padding-left: 25px;
+  margin: 1.5rem 0;
+  font-weight: 300;
+  line-height: 1.2;
+}
+body:not(.home) h2:before {
+  content: '';
+  background: #d9de22;
+  width: 15px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 0;
+}
 
 a, button, input[type="submit"], input[type="button"], .btn, li, img, div, h1, h2, h3, h4, p, span {
   transition: all 0.35s;

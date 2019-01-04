@@ -1,8 +1,20 @@
 		</div><!-- #content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-
-			<p>© Crank it up. Tous droits réservés 2018</p> 
+			
+			<div class="fl">
+			<p>© Tous droits réservés 2018</p>
+			<?php
+				/*Menu Footer*/ 
+				if ( has_nav_menu( 'bottom' ) ) : 
+					wp_nav_menu ( array (
+					'theme_location' => 'bottom' ,
+					'menu_class' => 'footer-menu', // classe CSS pour customiser mon menu
+					) ); 
+				endif;
+			?>
+			</div>
+			
 			<div class="imgContainer">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png" alt="logo greenpi">
 			</div> 

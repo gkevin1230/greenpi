@@ -19,7 +19,7 @@ footer .imgContainer {
     flex: 1;
     text-align: center;
 }
-footer ul {
+footer ul:not(.menu-bottom-menu) {
     list-style: none;
     padding: 0;
     display: flex;
@@ -35,4 +35,12 @@ footer ul li {
 }
 footer ul li:hover{
     color: rgba(255, 255, 255, 0.829);
+}
+/*Lien*/
+footer .menu-bottom-menu{
+    justify-content: flex-start;
+}
+footer .footer-menu a{
+    color: #5A5B5A;
+    font-size: 1rem;
 }
