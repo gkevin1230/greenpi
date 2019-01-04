@@ -1,6 +1,6 @@
 footer {
     background-color: #313231;
-    padding: 0 50px;
+    padding: 10px 50px;
     color: rgba(255, 255, 255, 0.2);
     font-style: italic;
     display: flex;
@@ -13,6 +13,7 @@ footer {
 }
 footer p, footer ul {
     width: 350px;
+    margin: 0;
 }
 footer .imgContainer {
     flex: 1;
@@ -31,4 +32,7 @@ footer ul li {
     font-size: 2em;
     margin: 0 10px;
     color: rgba(255, 255, 255, 0.2);
+}
+footer ul li:hover{
+    color: rgba(255, 255, 255, 0.829);
 }
