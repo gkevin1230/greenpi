@@ -10,7 +10,6 @@
  * @version 1.2
  *
  *
- * PAGE D'UN ARTICLE Sur la page blog
 */
 ?>
 

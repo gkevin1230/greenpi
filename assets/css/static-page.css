@@ -1,0 +1,9 @@
+/*CONTACT PAGE*/
+.post-full-content .wpcf7{
+    margin-top: 70px;
+}
+.wpcf7 form label{
+    width: 100%;
+    color: #8c8c8c;
+    font-weight: 400;
+}

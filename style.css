@@ -1455,17 +1455,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	width: 20px;
 }
 
-.page .panel-content .entry-title,
-.page-title,
-body.page:not(.greenpi-front-page) .entry-title {
-	color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 800;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-}
-
 .byline,
 .updated:not(.published) {
 	display: none;

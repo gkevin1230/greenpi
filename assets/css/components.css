@@ -15,8 +15,6 @@ $darkgreen: #5b960b;
 $white: #ffffff;
 $red: #ef5555;
 $darkred: #d24443;
-
-$testiText: #787b17;
 */
 
 
@@ -38,12 +36,12 @@ button:hover, a.btn:hover{
     color: #ffffff;
 }
 
-button.btn-primary, a.btn-primary {
+button.btn-primary, a.btn-primary, button, input[type="button"], input[type="submit"] {
     background-color: #71b90f;
     background-image: linear-gradient(to left, #71b90f 0%, #9bb90f 100%);
 }
 
-button.btn-primary:hover, a.btn-primary:hover {
+button.btn-primary:hover, a.btn-primary:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover {
     background-color: #5b960b;
     box-shadow: 0px 14px 45px -5px rgba(111, 184, 27, 0.8);
     -webkit-transform: scale(1.02) translateY(-2px);
@@ -78,6 +76,8 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 h1, h2{
@@ -85,15 +85,37 @@ h1, h2{
   font-weight: 900;
 }
 
-a, button, .btn, li, img, div, h1, h2, h3, h4, p, span {
+a, button, input[type="submit"], input[type="button"], .btn, li, img, div, h1, h2, h3, h4, p, span {
   transition: all 0.35s;
+}
+
+/*Titre des pages*/
+.page-header h1, .entry-header h1{
+  font-family: 'Roboto',Arial,sans-serif;
+  color: #4D4D4D;
+  font-size: 2.2em;
+  font-weight: 800;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+.blog .hr, .single .hr, .category .hr, .page .hr {
+  content: "";
+  width: 120px;
+  height: 20px;
+  margin: 0 auto 2em auto;
+  display: block;
+  background-color: #d7dd2c;
+  background: linear-gradient(270deg,#d7dd2c 0,#bfdd2d);
 }
 
 /*Interne page*/
 #main{
   margin-bottom: 6em;
 }
-
+.entry-content{
+  margin-bottom: 100px;
+  margin: 1.5em 0;
+}
 .entry-content a, .entry-meta a{
   color: #474747;
   transition: all 0.1s;
