@@ -19,11 +19,14 @@ footer .imgContainer {
     flex: 1;
     text-align: center;
 }
-footer ul:not(.menu-bottom-menu) {
+footer ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: flex-end;
+}
+footer .footer-menu{
+    justify-content: end;  
 }
 footer ul a {
     color: #313231;
