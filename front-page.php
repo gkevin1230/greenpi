@@ -134,7 +134,7 @@ get_header(); ?>
 						<i class="fa fa-quote-right"></i>
 					</div> 
 					<div class="footer">
-						<div class="profil"><img src="https://pbs.twimg.com/profile_images/758231275232714752/rtJayGFL_bigger.jpg" alt="Twitter Normandie web Xperts"></div> 
+						<div class="profil"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial-nwx.jpg" alt="Twitter Normandie web Xperts"></div> 
 							<p>Normandie web Xperts - @n_w_x</p>
 					</div>
 				</div> 
@@ -146,7 +146,7 @@ get_header(); ?>
 						<i class="fa fa-quote-right"></i>
 					</div> 
 					<div class="footer">
-						<div class="profil"><img src="https://pbs.twimg.com/profile_images/794849407275597825/jQrmLBor_bigger.jpg" alt="Twitter Normandie web Xperts"></div> 
+						<div class="profil"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial-nicolas-loque.jpg" alt="Twitter Normandie web Xperts"></div> 
 						<p>Nicolas Loqué - @nicolasloque</p>
 					</div>
 				</div> 
@@ -158,7 +158,7 @@ get_header(); ?>
 						<i class="fa fa-quote-right"></i>
 					</div> 
 					<div class="footer">
-						<div class="profil"><img src="https://pbs.twimg.com/profile_images/758231275232714752/rtJayGFL_bigger.jpg" alt="Twitter Normandie web Xperts"></div> 
+						<div class="profil"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial-nwx.jpg" alt="Twitter Normandie web Xperts"></div> 
 						<p>Normandie web Xperts - @n_w_x</p>
 					</div>
 				</div>
@@ -218,7 +218,7 @@ get_header(); ?>
 							<li><span class="typcn typcn-social-facebook"></span></li>
 						</a> 
 						<a data-aos="fade-left" data-aos-delay="500" href="https://www.behance.net/gpicture" target="_blank" class="aos-init">
-							<li><span class="typcn typcn-social-behance"></span></li>
+							<li><span class="typcn typcn-image-outline"></span></li>
 						</a> 
 						<a data-aos="fade-left" data-aos-delay="300" href="https://www.linkedin.com/in/k%C3%A9vin-geiger-08381b121/" target="_blank" class="aos-init">
 							<li><span class="typcn typcn-social-linkedin"></span></li>

@@ -120,7 +120,7 @@ a, button, input[type="submit"], input[type="button"], .btn, li, img, div, h1, h
   content: "";
   width: 120px;
   height: 20px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 30px auto;
   display: block;
   background-color: #d7dd2c;
   background: linear-gradient(270deg,#d7dd2c 0,#bfdd2d);

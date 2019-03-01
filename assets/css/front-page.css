@@ -9,10 +9,13 @@ section .text .hr {
     content: '';
     width: 100px;
     height: 10px;
-    margin-bottom: 15px;
     background-color: #d7dd2c;
     background: linear-gradient(to left, #d7dd2c 0%, #bfdd2d 100%);
     display: block;
+    margin: 0 0 30px 0;
+}
+.concept .text .hr, .team .text .hr{
+    margin: 0 auto 30px auto;
 }
 section .text p {
     color: #8c8c8c;
@@ -52,15 +55,6 @@ section .text p {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.concept .text .hr{
-    content: '';
-    width: 100px;
-    height: 10px;
-    margin-bottom: 15px;
-    background-color: #a7ab3b;
-    background: linear-gradient(to left, #d7dd2c 0%, #bfdd2d 100%);
-    margin: 0 auto;
 }
 .concept-box .concept-logo-center {
     background: url(../images/logo-concept.jpg) no-repeat 50% #fff;
@@ -125,10 +119,10 @@ section .text p {
 }
 .texte-concept span {
     content: '';
-    width: 15px;
+    width: 15px !important;
     background: #D6DC34;
-    height: 3px;
-    margin: 5px auto 0 auto;
+    height: 3px !important;
+    margin: 5px auto 0 auto !important;
     display: block;
     opacity: 0;
     -webkit-transform: translateY(40px);
@@ -141,6 +135,7 @@ section .text p {
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
     margin: 1em 0;
+    line-height: initial;
 }
 
 /*Chaque elements*/
